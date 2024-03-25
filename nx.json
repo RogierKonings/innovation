@@ -2,10 +2,34 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
-    "production": ["default"],
+    "production": [
+      "default",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/.eslintrc.json",
+      "!{projectRoot}/eslint.config.js"
+    ],
     "sharedGlobals": []
   },
-  "plugins": ["@nxtensions/astro"],
+  "plugins": [
+    "@nxtensions/astro",
+    {
+      "plugin": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "previewTargetName": "preview",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "serveStaticTargetName": "serve-static"
+      }
+    },
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    }
+  ],
   "targetDefaults": {
     "@nxtensions/astro:build": {
       "inputs": ["production", "^production"],
@@ -18,8 +42,13 @@
     },
     "@nxtensions/astro:preview": {
       "dependsOn": ["build"]
+    },
+    "@nx/vite:build": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   },
-  "defaultProject": "innovation",
+  "defaultProject": "libs",
   "nxCloudAccessToken": "NmE2NzIyZTMtMGQ1Yy00NTZlLTgwOWYtMzNlYWMwNjJkZTkzfHJlYWQtd3JpdGU="
 }
