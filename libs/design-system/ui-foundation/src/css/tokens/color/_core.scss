@@ -1,0 +1,33 @@
+@use "foundation";
+
+$color-dark: foundation.$neutral-600;
+$color-light: foundation.$neutral-100;
+$color-white: #ffffff;
+$color-transparent: transparent;
+
+$color-primary: foundation.$pink-400;
+$color-primary-darker: foundation.$pink-600;
+$color-secondary: foundation.$blue-100;
+$color-secondary-darker: foundation.$blue-200;
+$color-disabled: foundation.$neutral-400;
+$color-disabled-darker: foundation.$neutral-500;
+$color-disabled-lighter: foundation.$neutral-300;
+$color-border: foundation.$neutral-400;
+$color-border-light: foundation.$neutral-300;
+$color-shadow: foundation.$neutral-400;
+
+$color-background-light: $color-light;
+$color-background-200: foundation.$neutral-200;
+$color-background-300: foundation.$neutral-300;
+$color-background-400: foundation.$neutral-400;
+$color-border-disabled: $color-disabled;
+$color-border-transparent: transparent;
+$color-shadow-disabled: $color-disabled;
+$color-shadow-disabled-darker: $color-disabled-darker;
+$color-shadow-disabled-lighter: $color-disabled-lighter;
+$color-shadow-none: none;
+$color-text-light: $color-light;
+$color-text: $color-dark;
+$color-text-primary: $color-primary;
+$color-text-secondary-darker: $color-secondary-darker;
+$color-text-lighter: foundation.$neutral-500;

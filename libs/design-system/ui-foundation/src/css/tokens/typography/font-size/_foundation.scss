@@ -1,0 +1,54 @@
+// https://www.figma.com/file/lLkE2scdLVlVHckqgnG22F/InShared-Design-Library?type=design&node-id=366-69&mode=design&t=wiLyA9G1G08Lc2cJ-0
+
+$xxxs: 1.2rem;
+$xxs: 1.4rem;
+$xs: 1.5rem;
+$sm: 1.6rem;
+$lg: 1.7rem;
+$xl: 1.9rem;
+$xxl: 2rem;
+$xxxl: 2.2rem;
+$xxxxl: 2.4rem;
+$xxxxxl: 2.5rem;
+$xxxxxxl: 3.1rem;
+
+// HEADINGS
+
+// heading large
+$h1-lg: $xxxxxxl;
+$h2-lg: $xxxxl;
+$h3-lg: $xxxl;
+$h4-lg: $lg;
+
+// heading small
+$h1-sm: $xxxxxl;
+$h2-sm: $xxxl;
+$h3-sm: $xl;
+$h4-sm: $sm;
+
+// BODY
+
+// body large
+$paragraph-lg: $lg;
+$micro-hand-lg: $xxxl;
+$caption-lg: $sm;
+
+// body small
+$paragraph-sm: $sm;
+$micro-hand-sm: $xxl;
+$caption-sm: $xxs;
+
+// BUTTONS
+
+// button large
+$back-button-lg: $xxs;
+$link-lg: $xxxl;
+
+// button small
+$back-button-sm: $xxxs;
+$link-sm: $xxl;
+
+:root {
+    --font-size-paragraph-sm: $paragraph-sm;
+    --font-size-paragraph-lg: $paragraph-lg;
+}

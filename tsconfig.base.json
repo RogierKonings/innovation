@@ -1,24 +1,24 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "rootDir": ".",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
-    "lib": ["es2020", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@libs/astro": ["libs/astro/src/index.ts"],
-      "@shared/ui-common": ["libs/shared/ui-common/src/index.ts"],
-      "@shared/util-common": ["libs/shared/util-common/src/index.ts"]
-    }
-  },
-  "exclude": ["node_modules", "tmp"]
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2015",
+        "module": "esnext",
+        "lib": ["es2020", "dom"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@design-system/ui-website": ["libs/design-system/ui-website/src/index.ts"],
+            "@design-system/ui-common": ["libs/design-system/ui-common/src/index.ts"],
+            "@design-system/util-common": ["libs/design-system/util-common/src/index.ts"]
+        }
+    },
+    "exclude": ["node_modules", "tmp"]
 }

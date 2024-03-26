@@ -1,0 +1,19 @@
+{
+    "name": "ui-common",
+    "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "libs/design-system/ui-common/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/vite:build",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/libs/design-system/ui-common",
+                "main": "libs/design-system/ui-common/src/index.ts",
+                "tsConfig": "libs/design-system/ui-common/tsconfig.lib.json",
+                "assets": ["libs/design-system/ui-common/*.md"]
+            }
+        }
+    },
+    "tags": []
+}

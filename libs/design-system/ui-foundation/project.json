@@ -1,0 +1,6 @@
+{
+  "name": "ui-foundation",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/design-system/ui-foundation/src",
+  "projectType": "library"
+}

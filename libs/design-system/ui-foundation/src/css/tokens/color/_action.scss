@@ -1,0 +1,48 @@
+// used for button and links | see figma action sheet for more details
+
+@use "core";
+
+$color-primary-normal: core.$color-primary;
+$color-primary-hover: core.$color-secondary;
+$color-primary-active: core.$color-secondary-darker;
+$color-primary-disabled-lighter: core.$color-disabled-lighter;
+$color-primary-disabled: core.$color-disabled;
+$color-primary-disabled-darker: core.$color-disabled-darker;
+
+$color-background-primary-normal: $color-primary-normal;
+$color-background-primary-hover: $color-primary-hover;
+$color-background-primary-active: $color-primary-active;
+$color-background-primary-disabled: $color-primary-disabled-lighter;
+$color-background-secondary-normal: core.$color-background-light;
+$color-background-secondary-hover: core.$color-background-light;
+$color-background-secondary-active: core.$color-background-light;
+$color-background-secondary-disabled: core.$color-background-light;
+$color-background-secondary-disabled: core.$color-background-light;
+
+$color-border-primary-normal: core.$color-border-transparent;
+$color-border-primary-hover: core.$color-border-transparent;
+$color-border-primary-active: core.$color-border-transparent;
+$color-border-primary-disabled: $color-primary-disabled-lighter;
+$color-border-secondary-normal: core.$color-border-disabled;
+$color-border-secondary-hover: core.$color-border-disabled;
+$color-border-secondary-active: core.$color-border-disabled;
+$color-border-secondary-disabled: core.$color-border-disabled;
+
+$color-shadow-primary-normal: core.$color-primary-darker;
+$color-shadow-primary-hover: core.$color-secondary-darker;
+$color-shadow-primary-active: core.$color-shadow-none;
+$color-shadow-primary-disabled: core.$color-shadow-disabled-darker;
+$color-shadow-secondary-normal: core.$color-shadow-disabled;
+$color-shadow-secondary-hover: core.$color-shadow-disabled;
+$color-shadow-secondary-active: core.$color-shadow-none;
+$color-shadow-secondary-disabled: core.$color-shadow-disabled;
+
+$color-text-primary-normal: core.$color-text-light;
+$color-text-primary-hover: core.$color-text-light;
+$color-text-primary-active: core.$color-text-light;
+$color-text-primary-disabled: core.$color-disabled-darker;
+$color-text-secondary-normal: core.$color-text;
+$color-text-secondary-hover: core.$color-text-primary;
+$color-text-secondary-active: core.$color-text-secondary-darker;
+$color-text-secondary-disabled: core.$color-disabled;
+$color-text-tertiary-normal: core.$color-text-lighter;

@@ -1,3 +1,16 @@
 {
-  "singleQuote": true
+  "semi": true,
+  "trailingComma": "none",
+  "arrowParens": "always",
+  "singleQuote": true,
+  "tabWidth": 4,
+  "printWidth": 120,
+  "overrides": [
+    {
+      "files": ["**/*.css", "**/*.scss", "**/*.html", "**/*.njk"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }

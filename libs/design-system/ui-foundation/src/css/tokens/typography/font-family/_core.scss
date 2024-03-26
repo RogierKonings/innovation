@@ -1,0 +1,6 @@
+@use "foundation";
+
+$primary-bold: #{foundation.$primary-bold, foundation.$primary-bold-fallback};
+$primary-medium: #{foundation.$primary-medium, foundation.$primary-medium-fallback};
+$primary-regular: #{foundation.$primary-regular, foundation.$primary-fallback};
+$handwritten: #{foundation.$secondary, foundation.$secondary-fallback};

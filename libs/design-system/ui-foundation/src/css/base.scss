@@ -1,0 +1,261 @@
+@use "@design-system/ui-foundation/css/tokens/breakpoints";
+@use "@design-system/ui-foundation/css/tokens/border-radius";
+@use "@design-system/ui-foundation/css/tokens/border-width";
+@use "@design-system/ui-foundation/css/tokens/box-shadow";
+@use "@design-system/ui-foundation/css/tokens/color";
+@use "@design-system/ui-foundation/css/tokens/color/action";
+@use "@design-system/ui-foundation/css/tokens/spacing";
+@use "@design-system/ui-foundation/css/tokens/typography/font-family";
+@use "@design-system/ui-foundation/css/tokens/typography/font-size";
+@use "@design-system/ui-foundation/css/tokens/typography/font-weight";
+@use "@design-system/ui-foundation/css/tokens/typography/line-height";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    --font-size: #{font-size.$paragraph-sm};
+    margin: 0;
+    font-family: font-family.$primary-regular;
+    font-size: var(--font-size);
+
+    &:has(.no-scroll) {
+        overflow: hidden;
+    }
+
+    @media screen and (min-width: breakpoints.$screen-md-min) {
+        --font-size: #{font-size.$paragraph-lg};
+    }
+}
+
+button {
+    font-family: font-family.$primary-bold;
+    font-weight: font-weight.$bold;
+    margin-top: 0;
+}
+
+input[type="text"],
+input[type="search"] {
+    padding: 1.3rem spacing.$xl;
+    color: color.$color-text-lighter;
+    border: 1px solid color.$color-border;
+    box-shadow: none;
+    border-radius: border-radius.$md;
+    outline-color: color.$color-primary;
+}
+
+input[type="search"] {
+    padding-right: spacing.$xxl;
+
+    &::-webkit-search-cancel-button {
+        display: none;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    --color: #{color.$color-dark};
+    --font-family: #{font-family.$primary-bold};
+    --font-size: #{font-size.$h1-sm};
+    --font-weight: #{font-weight.$bold};
+    --line-height: #{line-height.$h1-sm};
+
+    color: var(--color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
+}
+
+h1,
+.h1 {
+    --font-size: #{font-size.$h1-sm};
+    --line-height: #{line-height.$h1-sm};
+
+    @media (min-width: 768px) {
+        --font-size: #{font-size.$h1-lg};
+        --line-height: #{line-height.$h1-lg};
+    }
+}
+
+h2,
+.h2 {
+    --font-size: #{font-size.$h2-sm};
+    --line-height: #{line-height.$h2-sm};
+
+    @media (min-width: 768px) {
+        --font-size: #{font-size.$h2-lg};
+        --line-height: #{line-height.$h2-lg};
+    }
+}
+
+h3,
+.h3 {
+    --font-size: #{font-size.$h3-sm};
+    --line-height: #{line-height.$h3-sm};
+
+    @media (min-width: 768px) {
+        --font-size: #{font-size.$h3-lg};
+        --line-height: #{line-height.$h3-lg};
+    }
+}
+
+h4,
+.h4 {
+    --font-size: #{font-size.$h4-sm};
+    --line-height: #{line-height.$h4-sm};
+
+    @media (min-width: 768px) {
+        --font-size: #{font-size.$h4-lg};
+        --line-height: #{line-height.$h4-lg};
+    }
+}
+
+p,
+p.bold {
+    font-family: font-family.$primary-regular;
+    font-weight: font-weight.$normal;
+    color: color.$color-text-lighter;
+    font-size: font-size.$paragraph-sm;
+    line-height: line-height.$paragraph-sm;
+
+    @media (min-width: breakpoints.$screen-desktop-min) {
+        font-size: font-size.$paragraph-lg;
+        line-height: line-height.$paragraph-lg;
+    }
+}
+
+p.bold {
+    font-family: font-family.$primary-medium;
+    font-weight: font-weight.$medium;
+}
+
+.text-micro-hand {
+    font-family: font-family.$handwritten;
+    font-weight: font-size.$micro-hand-sm;
+    color: color.$color-text-lighter;
+    font-size: font-size.$micro-hand-sm;
+
+    @media (min-width: breakpoints.$screen-desktop-min) {
+        font-size: font-size.$micro-hand-lg;
+    }
+}
+
+.text-caption {
+    font-family: font-family.$primary-regular;
+    font-weight: font-weight.$normal;
+    color: color.$color-text-lighter;
+    font-size: font-size.$caption-sm;
+    line-height: line-height.$caption-sm;
+
+    @media (min-width: breakpoints.$screen-desktop-min) {
+        font-size: font-size.$caption-lg;
+        line-height: line-height.$caption-lg;
+    }
+}
+
+.text-back-button {
+    font-family: font-family.$primary-bold;
+    font-weight: font-weight.$bold;
+    color: color.$color-dark;
+    font-size: font-size.$back-button-sm;
+    line-height: line-height.$back-button;
+
+    @media (min-width: breakpoints.$screen-desktop-min) {
+        font-size: font-size.$back-button-lg;
+    }
+}
+
+a,
+a.primary {
+    &:hover {
+        color: action.$color-primary-hover;
+        fill: action.$color-primary-hover;
+    }
+
+    &:active {
+        color: action.$color-primary-active;
+        fill: action.$color-primary-active;
+    }
+
+    &:disabled {
+        color: action.$color-primary-disabled;
+        fill: action.$color-primary-disabled;
+    }
+}
+
+// Default styling
+a {
+    text-decoration: underline;
+    color: color.$color-text-lighter;
+    fill: color.$color-text-lighter;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+// Primary color
+a.primary {
+    color: color.$color-primary;
+    fill: color.$color-primary;
+    font-size: font-size.$link-sm;
+    font-family: font-family.$handwritten;
+
+    @media (min-width: breakpoints.$screen-desktop-min) {
+        font-size: font-size.$link-lg;
+    }
+}
+
+a.simple {
+    text-decoration: none;
+    color: color.$color-dark;
+    &:hover {
+        color: color.$color-primary;
+    }
+}
+
+a.link-button {
+    border: border-width.$sm solid color.$color-border;
+    text-decoration: none;
+    color: color.$color-dark;
+    padding: spacing.$md spacing.$lg;
+    border-radius: border-radius.$lg;
+    background-color: color.$color-white;
+    &:hover {
+        color: color.$color-primary;
+        text-decoration: underline;
+    }
+}
+
+// Icons
+a svg,
+.link svg {
+    height: 1.6rem;
+    width: 1.6rem;
+}
+
+a svg.left,
+.link svg.left {
+    margin-right: spacing.$sm;
+}
+
+a svg.right,
+.link svg.right {
+    margin-left: spacing.$sm;
+}
